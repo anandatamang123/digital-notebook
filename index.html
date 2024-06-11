@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Notebook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Digital Notebook</h1>
+            <div id="quote">
+                "The palest ink is better than the best memory." - Chinese Proverb
+            </div>
+            <button id="add-note-button">Add Note</button>
+        </header>
+        <main>
+            <aside>
+                <h2>Categories</h2>
+                <input type="text" id="search-category" placeholder="Search by category...">
+                <ul id="categories-list"></ul>
+            </aside>
+            <section>
+                <h2>Notes</h2>
+                <div id="notes-list"></div>
+            </section>
+        </main>
+        <div id="note-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <form id="note-form">
+                    <input type="hidden" id="note-id">
+                    <label for="note-title">Title</label>
+                    <input type="text" id="note-title" name="title" required>
+                    <label for="note-category">Category</label>
+                    <input type="text" id="note-category" name="category" required>
+                    <label for="note-content">Content</label>
+                    <textarea id="note-content" name="content" required></textarea>
+                    <label for="note-image">Image</label>
+                    <input type="file" id="note-image" name="image" accept="image/*">
+                    <button type="submit">Save Note</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

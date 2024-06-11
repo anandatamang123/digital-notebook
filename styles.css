@@ -1,0 +1,222 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    width: 90%;
+    max-width: 1200px;
+    background: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header #quote {
+    margin: 1em 0;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ff9800;
+}
+
+header button {
+    background: #ff9800;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+header button:hover {
+    background: #ff5722;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 160px);
+}
+
+aside {
+    width: 25%;
+    background: #2c2c2c;
+    padding: 1em;
+    border-right: 1px solid #444;
+    overflow-y: auto;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+#search-category {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #444;
+    color: #ffffff;
+}
+
+#categories-list {
+    list-style: none;
+    padding: 0;
+}
+
+#categories-list li {
+    padding: 0.5em;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    color: #ff9800;
+}
+
+#categories-list li:hover {
+    background: #444;
+}
+
+section {
+    width: 75%;
+    padding: 1em;
+    overflow-y: auto;
+}
+
+#notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.note {
+    background: #2c2c2c;
+    border: 1px solid #444;
+    padding: 1em;
+    border-radius: 8px;
+    width: calc(33.333% - 2em);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: relative;
+    color: #ffffff;
+}
+
+.note h3 {
+    margin: 0 0 0.5em;
+    color: #ff9800;
+}
+
+.note p {
+    margin: 0.5em 0;
+}
+
+.note img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+.note button {
+    background: #f44336;
+    border: none;
+    color: white;
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.note button:hover {
+    background: #d32f2f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #333;
+    color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #444;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #444;
+    color: #ffffff;
+}
+
+form button {
+    background: #4caf50;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+form button:hover {
+    background: #388e3c;
+}
